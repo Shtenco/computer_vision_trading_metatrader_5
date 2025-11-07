@@ -123,7 +123,7 @@ Qualified investor in Kazakhstan and Russia. AI and quantum computing specialist
 - Email: koshtenco@gmail.com
 - Telegram: @Shtenco
 - VK: https://vk.com/altradinger
-- MQL5: [https://www.mql5.com/ru/users/yevgeniy.koshtenko](https://www.mql5.com/ru/users/koshtenko)
+- MQL5: https://www.mql5.com/ru/users/koshtenko
 
 ## License
 
