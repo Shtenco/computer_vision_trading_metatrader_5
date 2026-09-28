@@ -163,3 +163,27 @@ flowchart LR
 README не должен утверждать больше, чем подтверждают код, тесты и сохранённые артефакты. Для рыночных/экономических проектов backtest или внутренняя переоценка не равны реализованной внешней прибыли; для AI/infra проектов benchmark или диаграмма не равны production-надежности.
 
 <!-- SYNERGY-FEDERATION-PASSPORT:END -->
+
+---
+
+# 👁️ Глубокий доказательный паспорт Computer Vision Trading
+
+## Реальность `main`
+
+Repo содержит `computer_vision_trading.py` и README. Это компактная research prototype line, а не benchmark-complete ML package.
+
+## Главный leakage risk
+
+RGB image construction, indicator normalization и bidirectional sequence layers могут легко включить информацию, недоступную в момент решения. Любая predictive claim требует строгого causal image-generation audit.
+
+```mermaid
+flowchart LR
+    BARS[Past bars only] --> RGB[RGB encoding]
+    RGB --> CNN[CV model]
+    CNN --> PRED[Direction / magnitude]
+    PRED --> WF[Purged walk-forward]
+```
+
+## Следующий рубеж
+
+freeze image encoder → fit normalization on train only → compare to tabular baseline → purged walk-forward → attention sanity checks → OOS costed trading evaluation.
